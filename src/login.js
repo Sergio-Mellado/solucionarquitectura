@@ -1,18 +1,49 @@
+// Login.js
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import './login.css';
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './login';
-import Productos from './productos';
+// Componente de inicio de sesión que permite a los usuarios ingresar sus credenciales
+const Login = () => {
+  // Uso del hook useHistory para navegar a diferentes rutas
+  const history = useHistory();
+  
+  // Estados para almacenar los valores de usuario y contraseña
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-const App = () => {
+  // Funciones para manejar cambios en el campo de usuario y contraseña
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  // Función para manejar el envío del formulario de inicio de sesión
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(`Usuario: ${username} Contraseña: ${password}`);
+    history.push('/productos'); // Redirige a la página de productos después del inicio de sesión exitoso
+  };
+
+  // Estructura del formulario de inicio de sesión con campos de usuario y contraseña
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Login} />
-        <Route path="/productos" component={Productos} />
-      </Switch>
-    </Router>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h2>Login</h2>
+        <div>
+          <label>Usuario</label>
+          <input type="text" value={username} onChange={handleUsernameChange} />
+        </div>
+        <div>
+          <label>Contraseña</label>
+          <input type="password" value={password} onChange={handlePasswordChange} />
+        </div>
+        <button type="submit">Ingresar</button>
+      </form>
+    </div>
   );
-};
-
-export default App;
+ };
+export default Login;
