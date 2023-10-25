@@ -1,7 +1,3 @@
-// Productos.js
-import React, { useState } from 'react';
-
-
 // Componente que muestra una lista de productos y permite la búsqueda
 const Productos = () => {
   const [products, setProducts] = useState([

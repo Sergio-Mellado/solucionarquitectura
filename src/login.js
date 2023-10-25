@@ -1,6 +1,4 @@
-// Login.js
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+
 import './login.css';
 
 // Componente de inicio de sesión que permite a los usuarios ingresar sus credenciales
