@@ -1,3 +1,7 @@
+import React, {useState} from 'react';
+import './productos.css';
+
+
 // Componente que muestra una lista de productos y permite la búsqueda
 const Productos = () => {
   const [products, setProducts] = useState([
@@ -9,6 +13,7 @@ const Productos = () => {
     { id: 6, name: 'Product 6' },
     { id: 7, name: 'Product 7' },
     // Agrega más productos si es necesario
+
   ]);
 
   const [searchTerm, setSearchTerm] = useState('');
