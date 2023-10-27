@@ -1,31 +1,91 @@
+/* productos.css */
+
+/* Estilos para el contenedor principal */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #a7e9af; /* Color de fondo verde lima */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center; /* Centro el contenido */
+}
+
+/* Estilos para el encabezado */
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el campo de búsqueda y botón */
+.search-container {
+  display: flex;
+  justify-content: center; /* Centra el campo de búsqueda y el botón */
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 0 5px 5px 0;
+  background-color: #4CAF50; /* Color de fondo verde para el botón */
+  color: white;
+  cursor: pointer;
+}
 
 /* Estilos para la lista de productos */
-.productos-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .productos-title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .productos-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .productos-item {
-    background-color: #f9f9f9;
-    border: 2px solid #010101;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-  
-  .productos-item:hover {
-    background-color: #e9e9e9;
-    cursor: pointer;
-  }
-  
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilos para cada elemento de la lista de productos */
+.product-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Estilos para la tarjeta de producto */
+.product-card {
+  background-color: #43c7a4;
+  padding: 5px;
+  border: 3px solid #020202;
+  border-radius: 5px;
+  text-align: center; /* Centro el contenido en la tarjeta */
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 1em;
+  color: #0b0b0b;
+  margin-bottom: 10px;
+}
+
+.product-link {
+  display: inline-block;
+  background-color: #4CAF50; /* Color de fondo verde para el botón "Ver más" */
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}

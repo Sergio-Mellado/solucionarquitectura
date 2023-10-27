@@ -1,48 +1,64 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './productos.css';
 
-
-// Componente que muestra una lista de productos y permite la búsqueda
 const Productos = () => {
   const [products, setProducts] = useState([
-    { id: 1, name: 'Product 1' },
-    { id: 2, name: 'Product 2' },
-    { id: 3, name: 'Product 3' },
-    { id: 4, name: 'Product 4' },
-    { id: 5, name: 'Product 5' },
-    { id: 6, name: 'Product 6' },
-    { id: 7, name: 'Product 7' },
+    { id: 1, name: 'Manzanas', description: 'Manzanas frescas de la granja loca, las mejores manzanas del lugar, dulces y maduras, rojas como el amor que tenemos hacia ti .', imageUrl: 'https://cdn.forbes.com.mx/2015/10/juliana-640x400.jpg' },
     // Agrega más productos si es necesario
-
   ]);
 
   const [searchTerm, setSearchTerm] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  // Manejador de cambio en el campo de búsqueda
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  // Filtra los productos en base al término de búsqueda
+  const handleLogin = () => {
+    setLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setLoggedIn(false);
+  };
+
+  const handleMoreDetails = (product) => {
+    // Agrega la lógica para mostrar más detalles del producto
+    console.log("Detalles del producto:", product);
+    // Aquí puedes implementar una modal o una nueva página para mostrar los detalles del producto
+  };
+
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Interfaz del componente de Productos
   return (
-    <div>
-      <h2>Lista de Productos</h2>
-      <input
-        type="text"
-        placeholder="Buscar por nombre"
-        value={searchTerm}
-        onChange={handleSearchChange}
-      />
-      <ul>
+    <div className="container">
+      {loggedIn && <h3>Bienvenido panchouwu</h3>}
+      <h1>Productos</h1>
+      <h3>Encuentra tus productos</h3>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Ingresar nombre"
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+        <button type="submit">Buscar</button>
+      </div>
+      <ul className="product-list">
         {filteredProducts.map((product) => (
-          <li key={product.id}>{product.name}</li>
+          <li key={product.id} className="product-item">
+            <div className="product-card">
+              <img src={product.imageUrl} alt={product.name} className="product-image" />
+              <h3 className="product-name">{product.name}</h3>
+              <p className="product-description">{product.description}</p>
+              <button onClick={() => handleMoreDetails(product)}>Ver más</button>
+            </div>
+          </li>
         ))}
       </ul>
+      {loggedIn && <button onClick={handleLogout}>Salir</button>}
     </div>
   );
 };
