@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './productos.css';
 
+/**
+ * Componente de productos que muestra una lista de productos y permite buscar y ver detalles.
+ */
 const Productos = () => {
   const [products, setProducts] = useState([
-    { id: 1, name: 'Manzanas', description: 'Manzanas frescas de la granja loca, las mejores manzanas del lugar, dulces y maduras, rojas como el amor que tenemos hacia ti .', imageUrl: 'https://cdn.forbes.com.mx/2015/10/juliana-640x400.jpg' },
+    { id: 1, name: 'Manzanas', description: 'Manzanas frescas de la granja loca, las mejores manzanas del lugar, dulces y maduras, rojas como el amor que tenemos hacia ti.', imageUrl: 'https://cdn.forbes.com.mx/2015/10/juliana-640x400.jpg' },
     // Agrega más productos si es necesario
   ]);
 
@@ -23,9 +26,7 @@ const Productos = () => {
   };
 
   const handleMoreDetails = (product) => {
-    // Agrega la lógica para mostrar más detalles del producto
     console.log("Detalles del producto:", product);
-    // Aquí puedes implementar una modal o una nueva página para mostrar los detalles del producto
   };
 
   const filteredProducts = products.filter((product) =>
@@ -34,9 +35,7 @@ const Productos = () => {
 
   return (
     <div className="container">
-      {loggedIn && <h3>Bienvenido panchouwu</h3>}
-      <h1>Productos</h1>
-      <h3>Encuentra tus productos</h3>
+      <h1>¡Descubre los mejores productos!</h1>
       <div className="search-container">
         <input
           type="text"
