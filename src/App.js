@@ -1,30 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { HashRouter, createRoutes, RouterProvider } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './login';
 import Productos from './productos';
 import PerfilUsuario from './Perfil';
 
-const routes = createRoutes([
+const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Login />
+    element: <Login/>
   },
   {
     path: "/productos",
-    element: <Productos />
+    element: <Productos/>
   },
   {
     path: "/perfilusuario",
-    element: <PerfilUsuario />
+    element: <PerfilUsuario/>
   }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <HashRouter>
-      <RouterProvider routes={routes} />
-    </HashRouter>
-  </React.StrictMode>
-);
-export default './App' ;
+const App = () => {
+  return (
+   <>
+   <RouterProvider router={routes} />
+   </>
+  
+  )
+}
+
+ 
+
+export default App ;

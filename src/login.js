@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+
 import './login.css';
 
 /**
@@ -27,7 +28,9 @@ const Login = () => {
       alert('Inicio de sesión exitoso');
       navigate('/perfilusuario'); // Redirige al usuario a la página de perfil de usuario 
     } else {
-      alert('Datos incorrectos. Inténtalo de nuevo.');
+      <Alert variant="outlined" severity="error">
+            This is an error alert — check it out!
+      </Alert>
       // Aquí puedes agregar lógica para mostrar un mensaje de error al usuario si las credenciales son incorrectas
     }
   };
@@ -52,3 +55,4 @@ const Login = () => {
 };
 
 export default Login;
+
