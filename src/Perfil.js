@@ -31,7 +31,7 @@ const PerfilUsuario = () => {
   };
 
   const handleLogout = () => {
-    history.push('/'); // Redirige al usuario de vuelta a la página de inicio de sesión
+    history.push('./login.js'); // Redirige al usuario de vuelta a la página de inicio de sesión
   };
 
   return (
@@ -48,17 +48,17 @@ const PerfilUsuario = () => {
           Foto de perfil:
           <input type="file" accept="image/*" onChange={handleProfilePictureChange} />
         </label>
-        {user.profilePicture && <img src={user.profilePicture} alt="Foto de perfil" style={{ width: '100px', height: '100px' }} />}
+        {user.profilePicture && <img src={user.profilePicture} alt="Foto de perfil" style={{ width: '200px', height: '200px' }} />}
       </div>
       <div>
         <label>
-          Name:
+          Nombre Completo:
           <input type="text" value={user.name} onChange={handleNameChange} />
         </label>
       </div>
       <div>
         <label>
-          Email:
+          Correo :
           <input type="email" value={user.email} onChange={handleEmailChange} />
         </label>
       </div>
@@ -69,7 +69,7 @@ const PerfilUsuario = () => {
         </label>
       </div>
       <div>
-        <button onClick={() => console.log(user)}>Save</button>
+        <button onClick={() => console.log(user)}>Guardar</button>
       </div>
     </div>
   );
