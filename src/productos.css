@@ -4,7 +4,7 @@
 .container {
   width: 80%;
   margin: 0 auto;
-  background-color: #a7e9af; /* Color de fondo verde lima */
+  background-image: linear-gradient(45deg, #FFFB7D 0%, #85FFBD 57%, #ffffff 100%); /* Color de fondo verde lima */
   padding: 20px;
   border-radius: 10px;
   text-align: center; /* Centro el contenido */
@@ -56,7 +56,7 @@ button[type="submit"] {
 
 /* Estilos para la tarjeta de producto */
 .product-card {
-  background-color: #43c7a4;
+  background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);;
   padding: 5px;
   border: 3px solid #020202;
   border-radius: 5px;
