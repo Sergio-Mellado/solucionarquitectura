@@ -28,9 +28,7 @@ const Login = () => {
       alert('Inicio de sesión exitoso');
       navigate('/perfilusuario'); // Redirige al usuario a la página de perfil de usuario 
     } else {
-      <Alert variant="outlined" severity="error">
-            This is an error alert — check it out!
-      </Alert>
+      alert('Datos incorrectos. Inténtalo de nuevo.');
       // Aquí puedes agregar lógica para mostrar un mensaje de error al usuario si las credenciales son incorrectas
     }
   };
@@ -39,7 +37,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Bienvenido, Inicia Sesión</h2>
+        <h2>Bienvenido</h2>
         <div>
           <label>Usuario</label>
           <input type="text" value={Usuario} onChange={handleUsernameChange} />
@@ -55,4 +53,3 @@ const Login = () => {
 };
 
 export default Login;
-

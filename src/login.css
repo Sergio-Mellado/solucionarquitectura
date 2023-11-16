@@ -1,46 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /*background-image: url('Logo/Feria virtual.png');*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(45deg, #ffd445 0%, #91ff85 57%, #ffffff 100%);
+
+
+}
+
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .login-form {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .login-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .login-form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .login-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .login-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .login-form button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Agrega estilos adicionales según sea necesario */
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form {
+  width: 300px;
+  padding: 20px;
+  border: 3px solid #3a3a3a;
+  border-radius: 5px;
+  background-color: #FFFB7D;
+  background-image: linear-gradient(45deg, #FFFB7D 0%, #85FFBD 57%, #ffffff 100%);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Evitar que el ancho del input se extienda */
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px  solid black     ; 
+  cursor: pointer;
+}

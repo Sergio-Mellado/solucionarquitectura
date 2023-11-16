@@ -1,72 +1,74 @@
-/* Estilos para el perfil de usuario */
-h2 {
-  text-align: center;
-}
-
-.menu-torta {
+.perfil-container {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  height: 100vh;
+  padding: 20px;
 }
 
-.menu-torta ul {
-  list-style-type: none;
-  padding: 0;
+.perfil-info {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.menu-torta li {
-  margin: 0 10px;
-  cursor: pointer;
+.perfil-info label {
+  margin-bottom: 10px; /* Añade espacio debajo de la etiqueta */
 }
 
-.menu-torta li:hover {
-  color: blue;
+.perfil-info img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px; /* Añade espacio debajo de la imagen */
 }
 
-label {
-  display: block;
+.perfil-info div {
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.perfil-info h2 {
   margin-bottom: 10px;
+  font-size: 24px; /* Aumenta el tamaño de la fuente */
 }
 
-input[type="file"] {
-  margin-bottom: 10px;
+.perfil-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-textarea {
-  height: 100px;
-}
-
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
+.perfil-actions button {
+  margin-right: 10px;
   background-color: #4CAF50;
   color: white;
   border: none;
+  padding: 15px; /* Reduce el padding de los botones */
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px; /* Aumenta el tamaño de la fuente */
 }
 
-button:hover {
+.perfil-actions button:hover {
   background-color: #45a049;
 }
 
-img {
-  display: block;
-  margin: 20px auto;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
+.formulario-solicitud {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #FFFB7D;
+  background-image: linear-gradient(45deg, #FFFB7D 0%, #85FFBD 57%, #ffffff 100%);
+  padding: 20px;
+  border-radius: 10px; /* Agrega bordes redondeados al formulario */
 }
+
+.formulario-solicitud h3 {
+  margin-bottom: 30px;
+  font-size: 30px; /* Aumenta el tamaño de la fuente */
+}
+
+/* Otros estilos según sea necesario */
